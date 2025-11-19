@@ -1,0 +1,210 @@
+/* ========================================
+   1. TELAS PEQUENAS (até 576px) – Celulares
+   ======================================== */
+   
+   @media (max-width: 576px) {
+    /* Header – ícone + título centralizados */
+    header .logo {
+        font-size: 2rem !important;
+    }
+    header .title {
+        gap: 12px;
+        margin-left: 30px;
+        font-size: 1.4rem !important;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    /* Navbar – menu vira coluna com fundo suave */
+    .navbar-collapse {
+        background: rgba(30, 58, 138, 0.95);
+        backdrop-filter: blur(12px);
+        margin-top: 1rem;
+        border-radius: 16px;
+        padding: 1rem;
+        border: 1px solid rgba(0, 212, 255, 0.3);
+    }
+
+    .nav-link {
+        padding: 0.8rem 1rem !important;
+        margin: 0.3rem 0;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(0, 212, 255, 0.15);
+        transform: translateX(8px);
+    }
+
+    /* Títulos */
+    h2, .h2 {
+        font-size: 2rem !important;
+    }
+    h2::after {
+        width: 70px;
+        height: 3px;
+    }
+
+    /* Section About – empilha tudo */
+    #section-about {
+        padding: 40px 20px !important;
+        gap: 30px;
+        margin: 40px auto;
+    }
+    #section-about h2 {
+        font-size: 2.4rem !important;
+    }
+    #section-about p {
+        font-size: 1.15rem;
+    }
+
+    /* Cards do portfólio */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    .card img {
+        height: 200px !important;
+    }
+
+    /* Formulário de contato */
+    .form-control,
+    .btn-primary {
+        font-size: 1rem;
+    }
+
+    /* Botão voltar ao topo */
+    .position-fixed.btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    /* Social icons no contato */
+    .socials a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+}
+
+/* ========================================
+   2. TABLETS (577px – 992px)
+   ======================================== */
+@media (min-width: 577px) and (max-width: 992px) {
+    header .title {
+        font-size: 1.8rem;
+    }
+
+    #section-about {
+        padding: 50px 35px;
+        gap: 40px;
+    }
+
+    #section-about h2 {
+        font-size: 3rem;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .carousel-caption {
+        font-size: 1rem;
+        padding: 1rem !important;
+    }
+
+    .table {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   3. TELAS GRANDES (acima de 993px) – Ajustes finos
+   ======================================== */
+@media (min-width: 993px) {
+    /* Header – título bem à direita, sem precisar de truques */
+    header {
+        justify-content: space-between !important;
+    }
+    header .title {
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+
+    /* Section About – mais espaçamento luxuoso */
+    #section-about {
+        max-width: 1200px;
+        padding: 80px 60px;
+        gap: 70px;
+    }
+}
+
+/* ========================================
+   4. TELAS MUITO PEQUENAS (≤ 360px) – iPhone SE, etc.
+   ======================================== */
+@media (max-width: 360px) {
+    header .logo {
+        font-size: 1.8rem !important;
+    }
+    header .title {
+        font-size: 1.2rem !important;
+    }
+
+    h2, .h2 {
+        font-size: 1.8rem !important;
+    }
+
+    #section-about h2 {
+        font-size: 2rem !important;
+    }
+
+    .btn-primary {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .position-fixed.btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   5. MELHORIAS GERAIS DE ACESSIBILIDADE E PERFORMANCE
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visível para navegação por teclado (acessibilidade) */
+.nav-link:focus,
+.btn:focus,
+.card:focus-within,
+a:focus {
+    outline: 3px solid rgba(0, 212, 255, 0.6);
+    outline-offset: 4px;
+}
+
+/* Alto contraste opcional (acessibilidade) */
+@media (prefers-contrast: high) {
+    .navbar,
+    .card,
+    .modal-content,
+    #section-about {
+        border: 3px solid #00d4ff !important;
+    }
+    .text-white {
+        color: #fff !important;
+    }
+}
