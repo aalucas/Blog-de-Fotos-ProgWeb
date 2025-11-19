@@ -69,7 +69,7 @@ O arquivo `responsive.css` contém breakpoints otimizados:
 
 ## 🚀 Como visualizar o projeto
 
-📌 **Acesso o Projeto que está Hospedado no GitHub Pages**
+📌 **Acesse o Projeto via GitHub Pages**
 - [Link](https://aalucas.github.io/Blog-de-Fotos-ProgWeb/)
 
 ---
